@@ -1,0 +1,8 @@
+br\com\ttnotblunt\bluntSpawners\BluntSpawners.class
+br\com\ttnotblunt\bluntSpawners\listeners\MobBehaviorListener.class
+br\com\ttnotblunt\bluntSpawners\listeners\SpawnerListener.class
+br\com\ttnotblunt\bluntSpawners\commands\DarSpawnerCommand.class
+br\com\ttnotblunt\bluntSpawners\utils\SpawnerManager.class
+br\com\ttnotblunt\bluntSpawners\utils\SpawnerGUI.class
+br\com\ttnotblunt\bluntSpawners\data\SpawnerDataAPI.class
+br\com\ttnotblunt\bluntSpawners\utils\SpawnerItemBuilder.class

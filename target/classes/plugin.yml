@@ -1,0 +1,21 @@
+name: BluntSpawners
+version: '1.0.4-Sakura'
+main: br.com.ttnotblunt.bluntSpawners.BluntSpawners
+api-version: '1.21'
+authors: [ ttnotblunt ]
+description: Plugin de spawners, naturalmente completo.
+
+commands:
+  darspawner:
+    description: Dá um spawner ao jogador determinado, e na quantidade determinada.
+    usage: /<command> <jogador> <tipo> <quantidade>
+    permission: bluntspawners.darspawner
+
+permissions:
+  bluntspawners.darspawner:
+    description: Permissão necessária para dar um spawner ao jogador.
+    default: op
+
+  bluntspawners.admin:
+    description: Permite interagir com spawners de outros jogadores.
+    default: op

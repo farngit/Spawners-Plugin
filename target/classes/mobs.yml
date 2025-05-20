@@ -1,0 +1,14 @@
+mobs:
+  zombie: Zumbi
+  skeleton: Esqueleto
+  creeper: Creeper
+  spider: Aranha
+  chicken: Galinha
+  rabbit: Coelho
+  cow: Vaca
+  mushroom_cow: Vaca Cogumelo
+  pig: Porco
+  sheep: Ovelha
+  iron_golem: Golem de Ferro
+  slime: Slime
+  enderman: Enderman
