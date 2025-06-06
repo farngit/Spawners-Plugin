@@ -6,7 +6,7 @@
 
     <groupId>br.com.ttnotblunt</groupId>
     <artifactId>BluntSpawners</artifactId>
-    <version>1.0.4-Sakura</version>
+    <version>1.0.5-Sakura</version>
     <packaging>jar</packaging>
 
     <name>BluntSpawners</name>

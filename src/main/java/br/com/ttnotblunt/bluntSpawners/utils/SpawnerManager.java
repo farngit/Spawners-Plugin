@@ -9,12 +9,12 @@ import java.util.Objects;
 public class SpawnerManager {
 
     public static String traduzirMob(String mob) {
-        FileConfiguration config = BluntSpawners.getInstance().getConfig();
+        FileConfiguration config = BluntSpawners.getInstance().getMobsConfig();
         return config.getString("mobs." + mob.toLowerCase(), mob);
     }
 
     public static boolean ehMobValido(String mob) {
-        FileConfiguration config = BluntSpawners.getInstance().getConfig();
+        FileConfiguration config = BluntSpawners.getInstance().getMobsConfig();
         return config.contains("mobs." + mob.toLowerCase());
     }
 

@@ -11,11 +11,11 @@ public class SpawnerDataAPI {
         return Objects.requireNonNull(loc.getWorld()).getName() + "." + loc.getBlockX() + "_" + loc.getBlockY() + "_" + loc.getBlockZ();
     }
 
-    public static void setDono(Location loc, String nome) {
-        FileConfiguration config = BluntSpawners.getInstance().getSpawnerConfig();
-        config.set(getPath(loc) + ".dono", nome);
-        BluntSpawners.getInstance().saveSpawnerConfig();
-    }
+ //   // public static void setDono(Location loc, String nome) {
+ //        FileConfiguration config = BluntSpawners.getInstance().getSpawnerConfig();
+ //        config.set(getPath(loc) + ".dono", nome);
+ //        BluntSpawners.getInstance().saveSpawnerConfig();
+ //    }
 
     public static String getDono(Location loc) {
         FileConfiguration config = BluntSpawners.getInstance().getSpawnerConfig();

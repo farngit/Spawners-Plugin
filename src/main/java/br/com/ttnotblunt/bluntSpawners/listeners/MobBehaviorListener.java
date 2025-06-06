@@ -1,6 +1,5 @@
 package br.com.ttnotblunt.bluntSpawners.listeners;
 
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,10 +12,11 @@ public class MobBehaviorListener implements Listener {
 
     @EventHandler
     public void aoSpawnar(CreatureSpawnEvent e) {
+        // Verifica se foi gerado por um spawner
         if (e.getSpawnReason() != CreatureSpawnEvent.SpawnReason.SPAWNER) return;
-        if (!(e.getEntity() instanceof LivingEntity)) return;
 
-        LivingEntity mob = (LivingEntity) e.getEntity();
+        // Sem verificação redundante e cast desnecessário
+        LivingEntity mob = e.getEntity(); // Já é LivingEntity
         mob.setAI(false);
         mob.setSilent(true);
     }

@@ -1,5 +1,5 @@
 name: BluntSpawners
-version: '1.0.4-Sakura'
+version: '1.0.5-Sakura'
 main: br.com.ttnotblunt.bluntSpawners.BluntSpawners
 api-version: '1.21'
 authors: [ ttnotblunt ]

@@ -1,5 +1,6 @@
 package br.com.ttnotblunt.bluntSpawners.commands;
 
+import br.com.ttnotblunt.bluntSpawners.BluntSpawners;
 import br.com.ttnotblunt.bluntSpawners.utils.SpawnerItemBuilder;
 import br.com.ttnotblunt.bluntSpawners.utils.SpawnerManager;
 import org.bukkit.Bukkit;
@@ -8,6 +9,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.Objects;
 
 public class DarSpawnerCommand implements CommandExecutor {
 
@@ -29,10 +32,19 @@ public class DarSpawnerCommand implements CommandExecutor {
             return true;
         }
 
-        String mob = args[1].toUpperCase();
+        String mob = args[1].toLowerCase();
 
         if (!SpawnerManager.ehMobValido(mob)) {
-            sender.sendMessage("§cMob inválido. Verifique a confg.yml.");
+            try {
+                String mobsDisponiveis = String.join(", ",
+                        Objects.requireNonNull(BluntSpawners.getInstance()
+                                        .getMobsConfig()
+                                        .getConfigurationSection("mobs"))
+                                .getKeys(false));
+                sender.sendMessage("§cMob inválido. Mobs disponíveis: " + mobsDisponiveis);
+            } catch (NullPointerException e) {
+                sender.sendMessage("§cMob inválido. (Erro ao carregar lista de mobs)");
+            }
             return true;
         }
 
